@@ -1,0 +1,167 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    display: block;
+}
+
+body {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    color: azure;
+    background: linear-gradient(90deg, rgb(74, 74, 74), var(--color-grey));
+    --color-blue: #0009db;
+    --color-darker-blue: #001489;
+    --color-grey: #303841;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: azure;
+    z-index: 10;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li:hover {
+    background-color: lightgrey;
+}
+
+#navbar a {
+    display: block;
+    color: var(--color-darker-blue);
+    padding: 2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+    scroll-behavior: smooth;
+    }
+}
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, aqua, rgb(0, 200, 200));
+}
+
+#welcome-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #001489;
+}
+
+#welcome-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 100;
+    color: var(--color-blue);
+    margin-top: 10px;
+}
+
+#projects {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, var(--color-blue) 50%, var(--color-darker-blue));
+}
+
+#projects h2 {
+    margin: 10rem 0 5rem 0;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+#projects img {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile {
+    font-size: 2rem;
+    text-decoration: none;
+    color: azure;
+    background: var(--color-grey);
+    box-shadow: 1px 1px 2px black;
+}
+
+.project-tile:hover {
+    color: aqua;
+    background-color: gray;
+}
+
+.project-tile p {
+    margin-top: 1.6rem;
+}
+
+#contacts {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contacts h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#profile-link {
+    color: azure;
+    font-size: 1.6rem;
+    margin: 0.8rem auto;
+}
+
+footer {
+    border-top: 1px solid azure;
+}
+
+footer p {
+    text-align: end;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+}
